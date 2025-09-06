@@ -1,0 +1,32 @@
+# Ignore build directory
+/build/
+
+# Ignore CMake files
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+
+# Ignore compiled object files
+*.o
+*.obj
+
+# Ignore executable files
+*.exe
+*.out
+*.app
+
+# Ignore debug files
+*.dSYM/
+
+# Ignore user-specific files
+*.user
+*.sublime-project
+*.sublime-workspace
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+

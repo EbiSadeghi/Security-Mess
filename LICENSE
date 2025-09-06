@@ -1,0 +1,42 @@
+Custom BSD 3-Clause License with Restrictions on Commercial and AI use 
+
+Copyright (c) 2025, Ebi Sadeghi
+
+This repository contains experimental code that may not function as intended. Use at your own risk.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. **Retention of Notices**: Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. **Binary Redistribution**: Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. **Endorsement Restriction**: Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+   
+4. **Non-Commercial Use**: This code may only be used for non-commercial purposes. 
+   Any use that generates revenue, promotes products or services, or otherwise benefits financially from the code is strictly prohibited. 
+   Users must ensure that their applications of this code do not involve any commercial transactions or profit-making activities.
+
+5. **Prohibition on AI Training**: This code may not be utilized as training data for any machine learning models, algorithms, or artificial intelligence systems. 
+   Users are expressly forbidden from incorporating this code or any of its outputs into any AI training processes, including but not limited to supervised, 
+   unsupervised, or reinforcement learning applications.
+ 
+6. **Prohibition in Safety-Critical Areas**: This code may not be used in safety-critical applications or systems, including but not limited to medical devices, 
+   transportation systems, energy facilities, or any other applications where failure could result in injury, loss of life, or significant property damage. 
+   Users must ensure that this code is not deployed in any context where its failure could pose a risk to safety.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
