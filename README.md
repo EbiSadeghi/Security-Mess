@@ -7,7 +7,7 @@ Note: make sure to mark this repo as 'Do not trust' or equivalent in your IDE so
 
 ## Overview
 
-Welcome to the **Secure and Performant Code Project**! This repository is dedicated to providing high-quality, secure, and efficient code — primarily in C++. Our goal is to create a modular and maintainable codebase that adheres to best practices in software development.
+Welcome to the **Secure and Performant Code Project**! This repository is dedicated to developing high-quality, secure, and efficient code — primarily in C++. Our goal is to create a modular and maintainable codebase that adheres to best practices in software development.
 
 ## Features
 
