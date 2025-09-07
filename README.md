@@ -42,7 +42,7 @@ Welcome to the **Secure and Performant Code Project**! This repository is dedica
 
 3. Run the application:
    ```bash
-   ./TBD
+   ./SecureCpp
    ```
 
 ## Code Structure
