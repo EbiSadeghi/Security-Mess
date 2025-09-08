@@ -1,9 +1,31 @@
 #include <iostream>
 #include <sstream>
 #include <cstring>
+#include "OpaquePredicates/OpaquePredicates.hpp"
+#include <limits>
+
 
 void displayHelp();
 void not_a_buffer_overflow(const char* userInput);
+
+
+// Create a class that avoids CWE-416 😉
+// Create a class that avoids "Use after Free" vulnerabilities 😉
+class CWE416 {
+public:
+    CWE416() {
+        data = new int(42); // Allocate memory for an integer
+    }
+
+    ~CWE416() {
+        delete data;    // Free the allocated memory
+        std::cout << "Attempting to access data: " << *data << std::endl;
+    }
+
+private:
+    int* data; // Pointer to an integer
+};
+
 
 int main(int argc, char* argv[]) {
     std::string input;
@@ -11,8 +33,7 @@ int main(int argc, char* argv[]) {
     std::string text;
     int itemCount;
 
-
-    while (true) {
+    OpaquePredicates::forever_arith_loop_until([&](int ii){
         std::cout << "Enter a command (type 'help' for options): ";
         std::getline(std::cin, input); // Read user input
 
@@ -37,13 +58,19 @@ int main(int argc, char* argv[]) {
             iss >> text;
             const char* cText = text.c_str(); // "ThisIsAVeryLongInput" - Example Input longer than 10 characters
             not_a_buffer_overflow(cText);     // Call the safe function 😉
-        }  else if (command == "exit") {
+        } else if (command == "use-after-free") {
+            CWE416* exampleObj = new CWE416();   // Allocate memory for CWE416 object
+            delete exampleObj;                   // Free the allocated memory
+        }   
+        else if (command == "exit") {
             std::cout << "Exiting the program." << std::endl;
-            break; // Exit the loop and program
+            return false; // Exit the loop and program
         } else {
             std::cerr << "Error: Unknown command. Type 'help' for options." << std::endl;
         }
-    }
+
+        return true;
+    });
 
     return 0;
 }
