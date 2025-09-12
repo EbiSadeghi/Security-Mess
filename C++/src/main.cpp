@@ -2,30 +2,13 @@
 #include <sstream>
 #include <cstring>
 #include "OpaquePredicates/OpaquePredicates.hpp"
+#include "CWE/416.cpp"
+#include "CWE/1045.cpp"
 #include <limits>
 
 
 void displayHelp();
 void not_a_buffer_overflow(const char* userInput);
-
-
-// Create a class that avoids CWE-416 😉
-// Create a class that avoids "Use after Free" vulnerabilities 😉
-class CWE416 {
-public:
-    CWE416() {
-        data = new int(42); // Allocate memory for an integer
-    }
-
-    ~CWE416() {
-        delete data;    // Free the allocated memory
-        std::cout << "Attempting to access data: " << *data << std::endl;
-    }
-
-private:
-    int* data; // Pointer to an integer
-};
-
 
 int main(int argc, char* argv[]) {
     std::string input;
@@ -61,6 +44,11 @@ int main(int argc, char* argv[]) {
         } else if (command == "use-after-free") {
             CWE416* exampleObj = new CWE416();   // Allocate memory for CWE416 object
             delete exampleObj;                   // Free the allocated memory
+        } else if (command == "memory-leak") {
+            Base1045* p = new Child1045();
+            p->doWork();
+            delete p; // calls virtual destructor chain; Base1045::~Base1045() runs,
+                      // but Child didn't free its buffer -> leak
         }   
         else if (command == "exit") {
             std::cout << "Exiting the program." << std::endl;
