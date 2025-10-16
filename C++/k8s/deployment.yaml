@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: securecpp
-        image: registry.example.com/myorg/securecpp:0.0.2
+        image: localhost:5000/ebi/securecpp:0.0.3
         imagePullPolicy: IfNotPresent
         command: ["/usr/local/bin/SecureCpp"]
-        #args: [""] # TODO replace with runtime flag
+        args: ["buffer-overflow thisisdefinetlywaytoolong"]

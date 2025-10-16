@@ -10,6 +10,6 @@ spec:
       restartPolicy: Never
       containers:
       - name: securecpp
-        image: registry.example.com/myorg/securecpp:0.0.2
+        image: localhost:5000/ebi/securecpp:0.0.3
         imagePullPolicy: IfNotPresent
-        #args: [""] # TODO - replace with interactive
+        args: ["buffer-overflow thisisdefinetlywaytoolong"]
