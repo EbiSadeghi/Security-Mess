@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: securecpp-deployment
+  namespace: securecpp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: securecpp
+  template:
+    metadata:
+      labels:
+        app: securecpp
+    spec:
+      containers:
+      - name: securecpp
+        image: registry.example.com/myorg/securecpp:0.0.2
+        imagePullPolicy: IfNotPresent
+        command: ["/usr/local/bin/SecureCpp"]
+        #args: [""] # TODO replace with runtime flag

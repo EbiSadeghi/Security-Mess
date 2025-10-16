@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: securecpp-job
+  namespace: securecpp
+spec:
+  backoffLimit: 1
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: securecpp
+        image: registry.example.com/myorg/securecpp:0.0.2
+        imagePullPolicy: IfNotPresent
+        #args: [""] # TODO - replace with interactive
