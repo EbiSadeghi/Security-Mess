@@ -21,12 +21,23 @@ cmake_install.cmake
 
 # Ignore user-specific files
 *.user
-*.sublime-project
-*.sublime-workspace
 
 # Ignore IDE-specific files
 .vscode/
 .idea/
 *.swp
 *.swo
+
+# Ignore container/image artifacts and tarballs
+*.tar
+image.tar
+*.img
+
+# Ignore SBOM
+/sbom.cyclonedx.json
+/sbom.cdx.json
+/sbom.*
+/trivy-report.*
+/syft-*
+
 

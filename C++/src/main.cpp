@@ -4,6 +4,7 @@
 #include "OpaquePredicates/OpaquePredicates.hpp"
 #include "CWE/416.cpp"
 #include "CWE/1045.cpp"
+#include "main.hpp"
 #include <limits>
 
 

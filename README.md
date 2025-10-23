@@ -44,6 +44,12 @@ Welcome to the **Secure and Performant Code Project**! This repository is dedica
    ```bash
    ./SecureCpp
    ```
+   
+4. Or use docker:
+    ```
+    podman build -f Dockerfile -t ebi/securecpp:0.0.4
+    podman run --rm -it ebi/securecpp:0.0.4
+    ```
 
 ## Code Structure
 
